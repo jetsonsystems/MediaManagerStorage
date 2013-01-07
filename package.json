@@ -1,0 +1,12 @@
+{
+  "name": "MediaManagerStorage",
+  "main": "./lib/touchdb.js",
+  "version": "0.0.0",
+  "author": "Marek J. Ryniejski <marek@jetsonsys.com>",
+  "dependencies" : {
+    "underscore" : "*",
+    "node-uuid" : "*",
+    "request" : "*",
+    "async" : "*"
+  }
+}
