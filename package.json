@@ -7,6 +7,6 @@
     "underscore" : "*",
     "node-uuid" : "*",
     "request" : "*",
-    "async" : "*"
+    "async"  : "~0.1.22"
   }
 }
