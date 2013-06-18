@@ -4,9 +4,11 @@
   "version": "0.0.1",
   "author": "Marek J. Ryniejski <marek@jetsonsys.com>",
   "dependencies" : {
-    "underscore" : "*",
+    "underscore" : "~1.4.3",
     "node-uuid" : "*",
     "request" : "*",
-    "async"  : "~0.1.22"
+    "log4js"     : "~0.5.6",
+    "async"  : "~0.1.22",
+    "mootools"   : "=1.4.5"
   }
 }
