@@ -24,8 +24,10 @@ In addition in memory documents can be create utilizing the *<b>docFactory</b>* 
 ## Methods
 
   * *<b>get(\<storage sub module\>)</b>*: Load a storage <sub module>. Storage submodules may be:
+
     * touchdb: Loads the [MediaManagerStorage/lib/touchdb](https://github.com/jetsonsystems/MediaManager/blob/master/MediaManagerStorage/lib/touchdb/README.md) module.
     * gdrive: Loads the [MediaManagerStorage/lib/gdrive](https://github.com/jetsonsystems/MediaManager/blob/master/MediaManagerStorage/lib/gdrive/README.md) module.
+
   * *<b>docFactory(\<class_name attribute\>)</b>*: Creates in memory JSON representations of documents which are NOT tied to a particular storage engine. See: [Data Model](https://github.com/jetsonsystems/MediaManager/blob/master/MediaManagerStorage/lib/data-model/README.md).
     
 ## Data Model
