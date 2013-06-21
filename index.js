@@ -56,16 +56,18 @@ module.exports = function storageModule(config, opts) {
   var newInst = Object.create({}, { 
     config: { value: config },
     get: { value: function(storageSubModule) {
-      if (storageSubModule === 'touchdb') {
+      var toLoad = storageSubModule || 'touchdb';
+
+      if (toLoad === 'touchdb') {
         return require('./lib/touchdb')(config);
       }
-      else if (storageSubModule === 'gdrive') {
+      else if (toLoad === 'gdrive') {
         return require('./lib/gdrive');
       }
       else {
         throw Object.create(new Error(),
                             { name: { value: 'InvalidStorageSubModule' },
-                              message: { value: logPrefix + 'Invalid storage sub-module, must be either touchdb or gdrive!' } });
+                              message: { value: logPrefix + 'Invalid storage sub-module, must be either touchdb or gdrive! Defaults to touchdb.' } });
       }
     }},
     docFactory: { value: function(className, attrs) {

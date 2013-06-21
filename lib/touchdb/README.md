@@ -5,16 +5,16 @@ Interface to TouchDB.
 The current assumption is that we are talking to TouchDB via our web-service, MediaManagerTouchServ, which embeds TouchDB.
 
 ## Usage
-By default, loading [MediaManagerStorage](../../README.md) an invoking its *<b>getter</b>* to retrieve a storage sub-module returns an instance of TouchDB.
+By default, loading [MediaManagerStorage](../../README.md) and invoking its getter *<b>get</b>* method to retrieve a storage sub-module returns an instance of a TouchDB module.
 
     var config = requre('MediaManagerAppConfig');
     var touchdb = require('MediaManagerStorage')(config.db).get();
 
-The module is a Singleton, hence the first time it is required with a config, that is what will be used. Subsequent requiring of the module can leave out a config, and the singleton is returned.
+The module is a Singleton, hence the first time it is required with a config, that is what will be used. Subsequently a require of the module can leave out the config parameter, and the singleton is returned.
 
-It can also be explicity loaded with a config:
+It can also be explicity loaded:
 
-    var touchdb = require('MediaManagerStorage').get('touchdb', config.db)
+    var touchdb = require('MediaManagerStorage')(config.db).get('touchdb')
 
 ##  Public Module Attributes
 
