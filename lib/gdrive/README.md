@@ -63,7 +63,7 @@ Arguments:
   * *<b>accountDesc</b>*: Describes the Google account being used. See [AccoutDesc](#account-desc).
   * *<b>persistDir</b>*: Directory to persist work queues.
   * *<b>options</b>*:
-    * dryRun: If true, will process the attempts according to constraints and log but not actually do the upload. <b>Default: false</b>
+    * logOnly: If true, will process the attempts according to constraints and log but not actually do the upload. <b>Default: false</b>
     * uploadqFile: Filename to persist the internal *<b>upload queue</b>*. Default is <b>gdrive-uploadq.json</b>.
     * minRequestInterval: Minimum time between requests, default = 1 sec. (1000 ms).
     * location: A [locationDesc](#location-desc) which describes where assets are to be stored.
