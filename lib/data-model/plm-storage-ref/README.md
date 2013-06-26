@@ -6,6 +6,8 @@ A *<b>StorageRef</b>* describes a reference to a document or asset (ie: file) in
 
   * *<b>class_name</b>*: plm.StorageRef
   * *<b>doc_id</b>*: PLM doc this reference is associated with. IE: oid of a plm.Image document.
+  * <b>doc_class_name</b>*: The *<b>class_name</b>* atribute of the associated document. IE: plm.Image.
+  * *<b>asset_type</b>*: Asset type. Possible values: unknown or original.
   * *<b>desc</b>*: 'gdrive'
   * *<b>state</b>*: Attributes associated with the process of storing the asset, or any other state. Common to all providers / mechanisms. An object containing the following attributes:
     * status: <storage status>
@@ -32,4 +34,4 @@ The *<b>ref</b>* attribute is an object containing meta-data required to access 
   * account: Google account / username associated with the account used to store the asset. The user's Google email address.
   * file_id: Google Drive file ID to use to retrieve file.
 
-Note, a "File Resource":https://developers.google.com/drive/v2/reference/files#resource contains a downloadUrl. That is a "short lived" URL, and is hence NOT captured in the *<b>ref</b>* meta-data.
+Note, a [File Resource](https://developers.google.com/drive/v2/reference/files#resource) contains a downloadUrl. That is a "short lived" URL, and is hence NOT captured in the *<b>ref</b>* meta-data.
