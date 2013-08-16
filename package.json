@@ -8,11 +8,12 @@
     "node-uuid"  : "*",
     "request"    : "*",
     "log4js"     : "~0.5.6",
-    "async"      : "~0.1.22",
+    "async"       : "~0.2",
     "mootools"   : "=1.4.5",
     "nano"       : "https://github.com/jetsonsystems/nano/tarball/master",
     "objectq" : "https://github.com/marekjulian/node-objectq/tarball/master",
     "tasks-queue" : "~0.0.2",
-    "node-persist" : "https://github.com/marekjulian/node-persist/tarball/master"
+    "node-persist" : "https://github.com/marekjulian/node-persist/tarball/master",
+    "crypto"     : "*"
   }
 }

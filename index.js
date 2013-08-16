@@ -55,7 +55,7 @@ module.exports = function storageModule(config, opts) {
   //
   var newInst = Object.create({}, { 
     config: { value: config },
-    get: { value: function(storageSubModule) {
+    get: { value: function(storageSubModule, options) {
       var toLoad = storageSubModule || 'touchdb';
 
       if (toLoad === 'touchdb') {
@@ -63,6 +63,9 @@ module.exports = function storageModule(config, opts) {
       }
       else if (toLoad === 'gdrive') {
         return require('./lib/gdrive');
+      }
+      else if (toLoad === 'file-cache') {
+        return require('./lib/file-cache')(options);
       }
       else {
         throw Object.create(new Error(),
