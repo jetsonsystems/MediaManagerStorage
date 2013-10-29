@@ -7,7 +7,7 @@
     "underscore" : "~1.4.3",
     "node-uuid"  : "*",
     "request"    : "*",
-    "log4js"     : "~0.5.6",
+    "log4js"     : "https://github.com/marekjulian/log4js-node/tarball/master",
     "async"       : "~0.2",
     "mootools"   : "=1.4.5",
     "nano"       : "https://github.com/jetsonsystems/nano/tarball/master",
