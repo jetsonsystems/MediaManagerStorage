@@ -33,6 +33,7 @@ module.exports = function storageModule(config, opts) {
     //  Not the first time, you can leave off the config. Otherwise, it must be the same as the previous one.
     //
     if (config && !_.isEqual(storageInst.config, config)) {
+      log.error(logPrefix + 'Single config. conflict, singleton config - ' + JSON.stringify(storageInst.config) + ', new config - ' + JSON.stringify(config));
       throw Object.create(new Error(),
                           { name: { value: 'ReinstantiatingWithDifferentConfig' },
                             message: { value: logPrefix + 'Reinstantiating with a different configuration. Module is a singleton.' } });
