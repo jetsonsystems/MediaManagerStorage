@@ -8,7 +8,7 @@ A *<b>StorageRef</b>* describes a reference to a document or asset (ie: file) in
   * *<b>doc_id</b>*: PLM doc this reference is associated with. IE: oid of a plm.Image document.
   * <b>doc_class_name</b>*: The *<b>class_name</b>* atribute of the associated document. IE: plm.Image.
   * *<b>asset_type</b>*: Asset type. Possible values: unknown or original.
-  * *<b>desc</b>*: 'gdrive'
+  * *<b>desc</b>*: 'gdrive' || 'AWS/S3'
   * *<b>state</b>*: Attributes associated with the process of storing the asset, or any other state. Common to all providers / mechanisms. An object containing the following attributes:
     * status: <storage status>
 
@@ -35,3 +35,11 @@ The *<b>ref</b>* attribute is an object containing meta-data required to access 
   * file_id: Google Drive file ID to use to retrieve file.
 
 Note, a [File Resource](https://developers.google.com/drive/v2/reference/files#resource) contains a downloadUrl. That is a "short lived" URL, and is hence NOT captured in the *<b>ref</b>* meta-data.
+
+## AWS S3
+The *<b>desc</b>* attribute will have a value of <b>AWS/S3</b>.
+
+The *<b>ref</b>* attribute is an object containing the following attributes relevant to how the assets is stored on *<b>Amazon AWS's S3</b>* service:
+
+  * bucket: The name of the bucket.
+  * key: The key used to store the asset in the bucket.
